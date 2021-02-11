@@ -1,6 +1,6 @@
 ## The link for the assignment repo - https://github.com/divyanshkhatri/git-assignment-afternoon/
 
-### The steps followed to create the new repo are - 
+##### Steps to be followed for the following assignment
 
 1. Initialize git using the command 
 
