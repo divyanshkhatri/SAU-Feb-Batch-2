@@ -1,0 +1,251 @@
+.overflow {
+    width: 100vw;
+    height: 100vh;
+    /* border: 3px solid purple; */
+    background-color: white;
+    position: relative;
+}
+
+.intro {   
+    color: #1a1a1a;         
+    /* font-family: 'me-r'; */
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    height: 100vh;
+    display: flex;
+    top: -3vh;
+    left: 44vw;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -5vh; */
+    position: absolute;
+    /* border: 20px solid orange; */
+}
+
+.intro1 {   
+    color: #1a1a1a;         
+    /* font-family: 'me-r'; */
+    font-family: 'Inconsolata', monospace;
+    font-size: 30px;
+    /* margin-top: -50vh; */
+    top: 50vh;
+    left: 48vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* height: 100vh; */
+}
+
+.outPara {
+    position: absolute;
+    /* width: fit-content; */
+    /* height: fit-content; */
+    width: 98vw;
+    height: 98vh;
+    margin: 0;
+    top: 18vh;
+    right: 20vw;
+    /* border: 3px solid#0097A7; */
+}
+
+.bg { 
+    /* display: block;  */
+    /* margin: 0; */
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    /* top: 0;
+    left: 0; */
+    position: absolute;
+    /* background-color: #1a1a1a;
+    height: 100vh; */
+    /* opacity: 0.01; */
+    z-index: -6;
+    /* min-width: 600px; */
+    /* margin: 0 auto; */
+    /* mar */
+    /* height: 90vh; */
+
+    /* position:  absolute; */
+    /* border: 3px solid blue; */
+} 
+
+.aL:link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.aL:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.aL:visited {
+    text-decoration: none;
+    color: #000000;
+}
+
+.button {
+    position: absolute;
+    top: 5vh;
+    width: 2vw;
+    height: 2vh;
+    z-index: 10;
+
+}
+
+/* .backgroundColor {
+    width: 100%;
+} */
+
+.back {
+    position: absolute;
+    width: 100vw;
+    opacity: 1;   
+    filter: brightness(110%);
+    /* border: 3px solid white; */
+}
+
+.innerText {
+    position: absolute;
+    font-size: 145px;
+    right: 0;
+    line-height: 160px;
+    bottom: 0;
+    width: fit-content;
+    text-align: left;
+    /* border: 3px solid yellow; */
+}
+
+.backTextUp{
+    z-index: -5;
+    color: #ececec;
+    overflow: hidden;
+    font-size: 430px;
+    font-family: 'me-r';
+    /* font-family: 'Inconsolata', monospace; */
+    position: absolute;
+    margin: 0;
+    width: 98vw;
+    height: 56vh;
+    top: -6vh;
+}
+
+.theme {
+    position: absolute;
+    top: 1.1vh;
+    left: 1vw;
+    transform: rotate(-30deg);
+}
+
+.backTextDown{
+    z-index: -5;
+    color: #ececec;
+    overflow: hidden;
+    font-size: 480px;
+    margin: 0;
+    font-family: 'me-r';
+    /* font-family: 'Inconsolata', monospace; */
+    position: absolute;
+    width: 98vw;
+    height: 50vh;
+    top: 50vh;
+    line-height: 60vh;
+}
+
+.name {
+    color: #017CFF;
+    /* border: 3px solid brown; */
+}
+
+.paragraph {
+    color: #6D767E;
+    font-family: 'product-sans';
+    margin: 0;
+    /* line-height: 160px;     */
+    /* border: 3px solid orange; */
+    width: 82vw;
+    padding-top: 0;
+    height: 10vh; 
+    /* position: relative; */
+}
+
+.imageCr {
+    color: #FF5252;
+    /* border: 2px solid salmon; */
+}
+
+.initials {
+    position: absolute;
+    /* font-family: 'product-sans'; */
+    font-family: 'Inconsolata', monospace; 
+    /* font-family: 'Pacifico', cursive; */
+    /* border-bottom: 2px solid white; */
+    color: white;
+    /* font-weight: 200; */
+    font-size: 40px;
+    top: -4vh;
+    left: 2vw;
+}
+
+.points {
+    /* font-family: 'me-r'; */
+    font-family: 'Inconsolata', monospace;
+    color: #1a1a1a;
+    font-size: 20px;
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+    /* position: absolte; */
+    /* border: 3px solid yellow; */
+    
+}
+
+.pointsOuter {
+    /* border: 3px solid blue; */
+    position: absolute;
+    right: 80vw;
+    top: 20vh;
+    /* bottom: 10vh; */
+
+}
+
+.reach-outer {
+    position: absolute;
+    top: 24vh;
+    right: 2vw;
+}
+
+.reach {
+    /* font-family: 'me-r'; */
+    font-family: 'Inconsolata', monospace;
+    color: #1a1a1a;
+    font-size: 18px;
+    /* width: 20vw; */
+    writing-mode:vertical-rl;
+    /* border: 3px solid pink; */
+    transform: rotate(180deg);
+    /* text-align: right; */
+    /* z-index: 50; */
+    /* position: absolute; */
+   
+    margin-right: 2vw;
+}
+
+.main-content {
+    /* border: 3px solid yellow; */
+    position: relative;
+    width: 100%;
+}
+.tab { 
+    margin-top: 40px;   
+} 
+
+.made {
+    position: absolute;
+    font-family: 'Inconsolata', monospace;
+    top:90vh;
+    left: 2vw;
+    color: black;
+    /* background-color: #1f1f1f; */
+}
