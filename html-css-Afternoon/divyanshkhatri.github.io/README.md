@@ -1,6 +1,16 @@
 # Portfolio 
 
-![](./portfolio.gif)
+## Light Theme
+
+![Light Theme](./src/imgs/light.png)
+
+## Dark Theme
+
+![Dark Theme](./src/imgs/dark.png)
+
+### Please not that this is a gif, so it might be a little slow!
+
+![Dark Theme](./portfolio.gif)
 
 
 ## Available Scripts
