@@ -1,6 +1,6 @@
 # Portfolio 
 
-![]("./porfolio.gif")
+![]("./portfolio.gif")
 
 
 ## Available Scripts
