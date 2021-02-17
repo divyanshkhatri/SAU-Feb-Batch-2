@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Assignment - 2</title>
+        <style>
+            input {
+                clear:both;
+                margin-bottom: 15px;
+                padding:15px 10px;
+                width: 200px;
+                outline:none;
+                border:1px solid #bbb;
+                border-radius:20px;
+                display:inline-block;
+            }
+        </style>
+    </head>
+    <body style = "text-align: center; ">
+        <h1>Assignment - 2</h1>
+        <div style = "margin-top: 70px;">
+            <label for = "firstname">First Name: </label>
+            <input type = "text" id = "firstname" required/>
+            <br><br>
+            <label for = "lastname">Last Name: </label>
+            <input type = "text" id = "lastname" required/>
+            <br><br>
+            <label for = "age">Age: </label>
+            <input type = "number" id = "age" required/>
+            <br><br>
+            <label for = "gender">Gender: </label>
+            <label for="male">Male</label>
+            <input type = "radio" id = "male" value = "Male" name = "gender" required/>
+            <br>
+            <label for="female">Female</label>
+            <input type = "radio" id = "female" value = "Female" name = "gender" required/>
+            <br><br>
+            <label for = "rollno">Roll Number: </label>
+            <input type = "number" id = "rollno" required/>
+            <br><br>
+            <label for = "date">Date of birth: </label>
+            <input type = "date" id = "dob" required/>
+            <br><br>
+            <label for = "occupation">Occupation: </label>
+            <input type = "text" id = "occupation" required/>
+            <br><br>
+            <input type = "submit" id = "submit" value = "Submit" onclick = "getDetails()" />
+            <br><br>
+            <p id = "details"></p>
+            <label for = "newroll">Show details of student based on Roll Number: </label>
+            <input type = "number" id = "newroll" /> 
+            <input type = "submit" value = "Submit" id = "rollnodetails" onclick = "fetchdetails()"/>
+            <p id = "newdetails"></p>
+        </div>
+        <script>
+            let arr = [];
+            let details = {};
+            console.log(details);
+            getDetails = () => {
+                console.log(details);
+                details.firstName = document.getElementById("firstname").value;
+                details.lastName = document.getElementById("lastname").value;
+                details.age = document.getElementById("age").value;
+                if(document.getElementById("male").checked) {
+                    details.gender = document.getElementById("male").value;
+                } else {
+                    details.gender = document.getElementById("female").value;
+                }
+                details.rollno = document.getElementById("rollno").value;
+                details.date = document.getElementById("dob").value;
+                details.occupation = document.getElementById("occupation").value;
+                if(!details.firstName) {
+                    alert("Please enter the first name!");
+                }
+                if(!details.lastName) {
+                    alert("Please enter the last name!");
+                }
+                if(!details.age) {
+                    alert("Please enter the age!");
+                }
+                if(!details.gender) {
+                    alert("Please enter the gender!");
+                }
+                if(!details.rollno) {
+                    alert("Please enter the roll number!");
+                }
+                if(!details.date) {
+                    alert("Please enter the date!");
+                }
+                if(!details.occupation) {
+                    alert("Please enter the occupation!");
+                } else {
+                    arr[details.rollno] = details;
+                    document.getElementById("details").innerHTML = "The student has been added! Details are: " + 
+                    "First Name: " + details.firstName + 
+                    ". Last Name: " + details.lastName + 
+                    ". Age: " + details.age + 
+                    ". Gender: " + details.gender + 
+                    ". Roll Number: " + details.rollno + 
+                    ". Date of Birth: " + details.date + 
+                    ". Occupation: " + details.occupation
+                }
+            }
+
+            fetchdetails = () => {
+                if(!arr[document.getElementById("newroll").value]) {
+                    document.getElementById("newdetails").innerHTML = "Student not found!";
+                } else {
+                    document.getElementById("newdetails").innerHTML = "Details are: " + 
+                    "First Name: " + arr[document.getElementById("newroll").value].firstName + 
+                    ". Last Name: " + arr[document.getElementById("newroll").value].lastName + 
+                    ". Age: " + arr[document.getElementById("newroll").value].age + 
+                    ". Gender: " + arr[document.getElementById("newroll").value].gender + 
+                    ". Roll Number: " + arr[document.getElementById("newroll").value].rollno + 
+                    ". Date of Birth: " + arr[document.getElementById("newroll").value].date + 
+                    ". Occupation: " + arr[document.getElementById("newroll").value].occupation;
+                }
+            }
+
+        </script>
+    </body>
+</html>

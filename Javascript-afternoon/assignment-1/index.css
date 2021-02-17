@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
+
+body {
+	margin:0;
+	font-family:arial,tahoma,sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	direction:ltr;
+    background:white;
+}
+
+h1 {
+	font-size: 50px;
+	font-family: sans-serif;
+	text-align: center;
+	margin-top: 60px;
+}
+
+p {
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+div {
+	margin:10% auto 0 auto;
+	padding:0px;
+	width:400px;
+	height:auto;
+	overflow:hidden;
+	background:white;
+	border-radius:10px;
+}
+
+
+div input {
+	clear:both;
+	margin-bottom: 15px;
+	padding:15px 10px;
+	width:100%;
+	outline:none;
+	border:1px solid #bbb;
+	border-radius:20px;
+	display:inline-block;
+}
