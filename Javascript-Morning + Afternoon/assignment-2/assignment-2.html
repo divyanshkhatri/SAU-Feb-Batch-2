@@ -55,7 +55,6 @@
             let details = {};
             console.log(details);
             getDetails = () => {
-                console.log(details);
                 details.firstName = document.getElementById("firstname").value;
                 details.lastName = document.getElementById("lastname").value;
                 details.age = document.getElementById("age").value;
@@ -68,24 +67,31 @@
                 details.date = document.getElementById("dob").value;
                 details.occupation = document.getElementById("occupation").value;
                 if(!details.firstName) {
+                    console.log("Please enter the first name!");
                     alert("Please enter the first name!");
                 }
                 if(!details.lastName) {
+                    console.log("Please enter the last name!");
                     alert("Please enter the last name!");
                 }
                 if(!details.age) {
+                    console.log("Please enter the age!");
                     alert("Please enter the age!");
                 }
                 if(!details.gender) {
+                    console.log("Please enter the gender!");
                     alert("Please enter the gender!");
                 }
                 if(!details.rollno) {
+                    console.log("Please enter the roll number!");
                     alert("Please enter the roll number!");
                 }
                 if(!details.date) {
-                    alert("Please enter the date!");
+                    console.log("Please enter the date of birth!");
+                    alert("Please enter the date of birth!");
                 }
                 if(!details.occupation) {
+                    console.log("Please enter the occupation!");
                     alert("Please enter the occupation!");
                 } else {
                     arr[details.rollno] = details;
@@ -96,12 +102,15 @@
                     ". Gender: " + details.gender + 
                     ". Roll Number: " + details.rollno + 
                     ". Date of Birth: " + details.date + 
-                    ". Occupation: " + details.occupation
+                    ". Occupation: " + details.occupation;
+                    console.log(arr[details.rollno]);
+                    console.log(details);
                 }
             }
 
             fetchdetails = () => {
                 if(!arr[document.getElementById("newroll").value]) {
+                    console.log("Student not found!");
                     document.getElementById("newdetails").innerHTML = "Student not found!";
                 } else {
                     document.getElementById("newdetails").innerHTML = "Details are: " + 
@@ -112,6 +121,7 @@
                     ". Roll Number: " + arr[document.getElementById("newroll").value].rollno + 
                     ". Date of Birth: " + arr[document.getElementById("newroll").value].date + 
                     ". Occupation: " + arr[document.getElementById("newroll").value].occupation;
+                    console.log(arr[document.getElementById("newroll").value]);
                 }
             }
 
