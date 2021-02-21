@@ -1,0 +1,115 @@
+<div class="container" style = "text-align: center;">
+    <div class = "jumbotron">
+        <h2>Angular Assignment - Employee Records Insertion, Deletion and Sorting</h2>
+    </div>
+    <div class = "row">
+        <div class="col-xs-12">
+            <form [formGroup] = "registerForm" (ngSubmit) = "onSubmit()">
+                <label>
+                    First Name:
+                    <input type="text" id = "firstName" name = "firstName" formControlName="firstName" class = "form-control">
+                    <div *ngIf="firstName.invalid && firstName.touched" class="alert alert-danger">
+                        <div *ngIf="firstName.errors.required">
+                           First Name is required.
+                        </div>         
+                        <div *ngIf="firstName.errors.minlength">
+                            First Name must be at least 4 characters long.
+                        </div>                                   
+                    </div>
+                </label>
+                <br>
+                <label>
+                    Last Name:
+                    <input type="text" formControlName="lastName" class = "form-control">
+                    <div *ngIf="lastName.invalid && lastName.touched" class="alert alert-danger">
+                        <div *ngIf="lastName.errors.required">
+                            LastName is required.
+                        </div>         
+                        <div *ngIf="lastName.errors.minlength">
+                            Last Name must be at least 4 characters long.
+                        </div>                                   
+                    </div>
+                </label>
+                <br>
+                <label>
+                    Contact Number:
+                    <input type="text" formControlName="contactNumber" class = "form-control">
+                    <div *ngIf="contactNumber.invalid && contactNumber.touched" class="alert alert-danger">
+                        <div *ngIf="contactNumber.errors.required">
+                            Phone Number is required.
+                        </div>         
+                        <div *ngIf="contactNumber.errors.minlength">
+                            Contact Number must should be 10 digits.
+                        </div>     
+                        <div *ngIf="contactNumber.errors.pattern">   
+                            Contact Number is not valid
+                        </div>                          
+                    </div>
+                </label>
+                <br>
+                <label>
+                    Date of Birth:
+                    <input type="date" formControlName="dob" class = "form-control">
+                    <div *ngIf="dob.invalid && dob.touched" class="alert alert-danger">
+                        <div *ngIf="dob.errors.required">
+                            Date Of Birth is required.
+                        </div>                                          
+                    </div>
+                </label>
+                <br>
+                <label>
+                    City:
+                    <input type="text" formControlName="city" class = "form-control">
+                    <div *ngIf="city.invalid && city.touched" class="alert alert-danger">
+                        <div *ngIf="city.errors.required">
+                            City is required.
+                        </div>                                         
+                    </div>
+                </label>
+                <br>
+                <label>
+                    Picode:
+                    <input type="text" formControlName="pincode" class = "form-control">
+                    <div *ngIf="pincode.invalid && pincode.touched" class="alert alert-danger">
+                        <div *ngIf="pincode.errors.required">
+                            Pincode is required.
+                        </div>         
+                        <div *ngIf="pincode.errors.minlength">
+                            Pincode should be 6 characters long.
+                        </div>  
+                        <div *ngIf="pincode.errors.pattern">   
+                            Pincode is not valid
+                        </div>                                   
+                    </div>
+                </label>
+                <br>
+                <br>
+                <button class = "btn btn-primary" type="submit" [disabled]="!registerForm.valid">Submit</button>
+                <div *ngIf = "this.employee_records.length > 0">
+                    <h2>Employee Records Table</h2>
+                </div>
+                <table class ="table-style" *ngIf = "this.employee_records.length > 0">
+                    <thead>
+                        <tr>
+                            <th (click) = "sortTable(column)" *ngFor = "let column of headers">
+                                {{column}}
+                            </th>
+                            <th>{{this.orderStyle}}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let row of employee_records">
+                                <td>{{row.firstName}}</td>
+                                <td>{{row.lastName}}</td>
+                                <td>{{row.contactNumber}}</td>
+                                <td>{{row.dob | cutomDate}}</td>
+                                <td>{{row.city}}</td>
+                                <td>{{row.pincode}}</td>
+                            <td><img (click) = "onDeleteRecord(row)" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABQ0lEQVRIid2VPW6DQBCF32C4AoIifQpyAYSboFTGBVLOEMmcIF3S5gL4EpYoSJpIThPEBeIivYtFXAF7J81asiMw2CQSyZModpk3H8PsD/DXRV2CROA9Anj45nyy0+z+ZIAIPO76dXWyn7ODnFqfZGdLBB6fUsmx+F+vYBgAMRnPitA1d+MidE0xGc9+BCCmXgTimCttWYSuWYSuyZW2BHEspl7U5tfbAkiXC660GQCHK22pph0AK9LloncFVpKX2NI1CB8qsQPgcyT1GyvJy96AJtF22+kUaAUUoWtixG9gXAFYqedyY/DrfuPPBvBGu8XunxvSJ0P6CuKod/0AdprFYIrIkL6V5KWV5CUZ0gdTZKdZ3OZvXUUAYL+8z/fHqrnzhvADDWMnDxrQ1IM1gIsTL5913WRtBSxx12RoSq48/1Bf4TpwkBD0MPMAAAAASUVORK5CYII="></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </form>
+        </div>
+    </div>
+</div>
