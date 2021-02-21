@@ -6,11 +6,11 @@
 
 ### Screenshots and Demonstration Videos:
 
-![plot](/src/app/assets/images/demo-1.png)
-![plot](/src/app/assets/images/demo-2.png)
-![plot](/src/app/assets/images/demo-3.png)
+![plot](/src/assets/images/demo-1.png)
+![plot](/src/assets/images/demo-2.png)
+![plot](/src/assets/images/demo-3.png)
 
-![plot](/src/app/assets/images/Demonstration.gif)
+![plot](/src/assets/images/Demonstration.gif)
 
 
 ### Development server
