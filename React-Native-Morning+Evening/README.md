@@ -2,15 +2,16 @@
 
 ## Screenshots and Demonstration Video
 
-<img src = "./src_git/images/demo0.png" width = 30px; height = 70px>
+<img src = "./src_git/images/demo0.png" width = 150px; height = 350px>
 
-![plot](./src_git/images/demo1.png)
+<img src = "./src_git/images/demo1.png" width = 150px; height = 350px>
 
-![plot](./src_git/images/demo2.png)
+<img src = "./src_git/images/demo2.png" width = 150px; height = 350px>
 
-![plot](./src_git/images/demo3.png)
+<img src = "./src_git/images/demo3.png" width = 150px; height = 350px>
 
-![plot](./src_git/images/demo4.png)
+<img src = "./src_git/images/demo4.png" width = 150px; height = 350px>
 
-![plot](./src_git/images/demonstration.gif)
+<img src = "./src_git/images/demonstration.gif" width = 150px; height = 350px>
+
 
