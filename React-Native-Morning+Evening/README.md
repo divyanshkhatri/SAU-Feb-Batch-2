@@ -2,7 +2,7 @@
 
 ## Screenshots and Demonstration Video
 
-<img src = "./src_git/images/demo0.png" style = "width:30px; height: 70px">
+<img src = "./src_git/images/demo0.png" width = 30px; height = 70px>
 
 ![plot](./src_git/images/demo1.png)
 
