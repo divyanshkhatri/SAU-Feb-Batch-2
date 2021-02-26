@@ -1,0 +1,26 @@
+p {
+  color: white;
+  font-size: xxx-large;
+  text-align: center;
+  font-family: "Poppins-Bold";
+}
+
+@font-face {
+  font-family: 'Poppins-Black';
+  src: local('Poppins-Black'), url(./fonts/Poppins-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'ps-b';
+  src: local('ps-b'), url(./fonts/ps-b.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: local('Poppins-SemiBold'), url(./fonts/Poppins-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: local('Poppins-Bold'), url(./fonts/Poppins-Bold.ttf) format('truetype');
+}
