@@ -12,11 +12,44 @@ public class MainApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(MainApplication.class);
 		
 		Point p = context.getBean(Point.class);
+		Scanner sc = new Scanner(System.in);
 		
-		int[] point1 = {10,0}; 
-		int[] point2 = {10,5};
-		int[] point3 = {15,5};
-		int[] point4 = {15,0};
+		int[] point1 = new int[2]; 
+		int[] point2 = new int[2];
+		int[] point3 = new int[2];
+		int[] point4 = new int[2];
+		
+		System.out.println("Enter the X-coordinate of the Point A");
+		
+		point1[0] = sc.nextInt();
+		
+		System.out.println("Enter the Y-coordinate of the Point A");
+
+		point1[1] = sc.nextInt();
+		
+		System.out.println("Enter the X-coordinate of the Point B");
+		
+		point2[0] = sc.nextInt();
+		
+		System.out.println("Enter the Y-coordinate of the Point B");
+
+		point2[1] = sc.nextInt();
+
+		System.out.println("Enter the X-coordinate of the Point C");
+		
+		point3[0] = sc.nextInt();
+		
+		System.out.println("Enter the Y-coordinate of the Point C");
+
+		point3[1] = sc.nextInt();
+
+		System.out.println("Enter the X-coordinate of the Point D");
+		
+		point4[0] = sc.nextInt();
+		
+		System.out.println("Enter the Y-coordinate of the Point D");
+
+		point4[1] = sc.nextInt();
 		
 		p.setA(point1);
 		p.setB(point2);
