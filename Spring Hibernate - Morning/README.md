@@ -17,7 +17,7 @@
 
 <div>
     <img src = "./images/update-by-id.png">
-    <img src = "./images/updated-by-id-list.png">
+    <img src = "./images/update-by-id-list.png">
 </div>
 
 4.  Delete employee - warning: this cannot be recovered
