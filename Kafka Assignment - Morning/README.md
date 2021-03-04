@@ -3,5 +3,5 @@
 Demonstration Video
 
 <div>
-    <img src = "./images/kafka.gif">
+    <img src = "./images/Kafka.gif">
 </div>
