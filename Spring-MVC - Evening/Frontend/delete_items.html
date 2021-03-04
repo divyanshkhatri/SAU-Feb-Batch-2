@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link href = "./orders.css" rel="stylesheet" type = "text/css"/>
+    </head>
+    <body>
+        <div>
+            <div class = "topnav">
+                <a href = "order.html">Order</a>
+                <a href = "add_items.html">Add Items</a>
+                <a href = "update_items.html">Update Items</a>
+                <a href = "get_details.html">Get Details</a>
+                <a href = "delete_items.html">Delete Items</a>
+            </div>
+            <h1 style = "text-align: center;">Spring MVC Assignment</h1>
+            <div class="form-style-5">
+                <legend><span class="number">5</span>Delete Items</legend>
+                <fieldset>
+                    <input type="text" id = "order_id" name="Order Id" placeholder="Enter the Order Id">
+                    <input type="text" id = "item_id" name="Item Id" placeholder="Enter the item Id">
+                </fieldset>
+                <input type="submit" onclick = "submit()" value="Delete Items" />
+                <p id = "submit"></p>
+                <p id = "orderId"></p>
+                <p id = "item"></p>
+            </div>
+        </div>
+        <script>
+            submit = () => {
+                let order_id = document.getElementById("order_id").value;
+                let item_id = document.getElementById("item_id").value;
+
+                var myHeaders = {
+                    "Content-Type": "multipart/form-data"
+                }
+
+                var requestOptions = {
+                    method: 'DELETE',
+                    headers: {"Content-Type": "application/json"},
+                };
+
+                fetch(`http://localhost:8083/delete/item/${order_id}/${item_id}`, requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    document.getElementById("submit").innerHTML = "Item number " + document.getElementById("item_id").value + " of order number " + document.getElementById("order_id").value + " is deleted. The order details are: ";
+
+                    document.getElementById("orderId").innerHTML = "Order Id: " + result.orderId + "";
+                    let string = "";
+                    for(let i = 0; i<result.item.length; i++) {
+                        string += "Item Id: " + result.item[i].itemId + ", Item Name: " + result.item[i].itemName + 
+                        ", Item Quantity: " + result.item[i].itemQuantity + "<br />";
+                        
+                    }
+                    
+                    document.getElementById("item").innerHTML = string;
+                })
+                .catch(error => console.log('error', error));
+            }
+        </script>
+    </body>
+</html>

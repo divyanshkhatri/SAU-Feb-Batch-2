@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link href = "./orders.css" rel="stylesheet" type = "text/css"/>
+    </head>
+    <body>
+        <div>
+            <div class = "topnav">
+                <a href = "orders.html">Order</a>
+                <a href = "add_items.html">Add Items</a>
+                <a href = "update_items.html">Update Items</a>
+                <a href = "get_details.html">Get Details</a>
+                <a href = "delete_items.html">Delete Items</a>
+            </div>
+            <h1 style = "text-align: center;">Spring MVC Assignment</h1>
+            <div class="form-style-5">
+                <legend><span class="number">2</span>Add Items</legend>
+                <fieldset>
+                    <input id = "order_id" type="text" name="Order Id" placeholder="Enter the Order id">
+                    <input id = "item_id" type="text" name="Item Id" placeholder="Enter any Item id">
+                    <label for="items">Items:</label>
+                    <select id="items" name="field4">
+                        <optgroup label="Items">
+                        <option value="mobilephone">Mobile Phone</option>
+                        <option value="television">Television</option>
+                        <option value="fridge">Fridge</option>
+                        <option value="toothbrush">Toothbrush</option>
+                        <option value="games">Games</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="others">Other</option>
+                        </optgroup>
+                    </select>   
+                    <input type="text" name="Order Id" id = "quantity" placeholder="Enter the quantity of products">   
+                </fieldset>
+                <input type="submit" onclick = "submit()" value="Add Items" />
+                <p id = "submit"></p>
+                <p id = "orderId"></p>
+                <p id = "item"></p>
+            </div>
+        </div>
+        <script>
+
+            submit = () => {
+                let order_id = document.getElementById("order_id").value;
+                let item_id = document.getElementById("item_id").value;
+                let item = document.getElementById("items").value;
+                let quantity = document.getElementById("quantity").value;
+                let item_array = [];
+                let itemObj = {
+                    itemId: parseInt(item_id),
+                    itemName: item,
+                    itemQuantity: quantity,
+                }
+                item_array.push(itemObj);
+                let order = {
+                    orderId: parseInt(order_id),
+                    item: item_array
+                }
+
+                var myHeaders = {
+                    "Content-Type": "multipart/form-data"
+                }
+
+                var raw = JSON.stringify(order);
+                // console.log(raw);
+                var requestOptions = {
+                    method: 'POST',
+                    headers: {"Content-Type": "application/json"},
+                    body: raw,
+                };
+
+                fetch("http://localhost:8083/add/items", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    document.getElementById("submit").innerHTML = "Item updated to order number " + document.getElementById("order_id").value + ": ";
+                    document.getElementById("orderId").innerHTML = "Order Id: " + result.orderId + "";
+                    let string = "";
+                    for(let i = 0; i<result.item.length; i++) {
+                        string += "Item Id: " + result.item[i].itemId + ", Item Name: " + result.item[i].itemName + 
+                        ", Item Quantity: " + result.item[i].itemQuantity + "<br />";
+                        
+                    }
+                    
+                    document.getElementById("item").innerHTML = string;
+                })
+                .catch(error => console.log('error', error));
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <link href = "./orders.css" rel="stylesheet" type = "text/css"/>
+    </head>
+    <body>
+        <div>
+            <div class = "topnav">
+                <a href = "orders.html">Order</a>
+                <a href = "add_items.html">Add Items</a>
+                <a href = "update_items.html">Update Items</a>
+                <a href = "get_details.html">Get Details</a>
+                <a href = "delete_items.html">Delete Items</a>
+            </div>
+            <h1 style = "text-align: center;">Spring MVC Assignment</h1>
+            <div class="form-style-5">
+                <legend><span class="number">4</span>Get Order Details</legend>
+                <fieldset>
+                    <input type="text" name="Order Id" id = "order_id" placeholder="Enter the Order id">
+                </fieldset>
+                <input type="submit" onclick = "submit()" value="Get Details" />
+
+                <p id = "submit"></p>
+                <p id = "orderId"></p>
+                <p id = "item"></p>
+                <script>
+                    submit = () => {
+                        let order_id = document.getElementById("order_id").value;
+                        var myHeaders = {
+                            "Content-Type": "multipart/form-data"
+                        }
+                        // console.log(raw);
+                        var requestOptions = {
+                            method: 'GET',
+                            headers: {"Content-Type": "application/json"},
+                        };
+        
+                        fetch(`http://localhost:8083/order/${order_id}`, requestOptions)
+                        .then(response => response.json())
+                        .then(result => {
+                            console.log(result);
+                            document.getElementById("submit").innerHTML = "Details for order " + document.getElementById("order_id").value + ": ";
+                            document.getElementById("orderId").innerHTML = "Order Id: " + result.orderId + "";
+                            let string = "";
+                            for(let i = 0; i<result.item.length; i++) {
+                                string += "Item Id: " + result.item[i].itemId + ", Item Name: " + result.item[i].itemName + 
+                                ", Item Quantity: " + result.item[i].itemQuantity + "<br />";
+                                
+                            }
+                            
+                            document.getElementById("item").innerHTML = string;
+                        })
+                        .catch(error => console.log('error', error));
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
