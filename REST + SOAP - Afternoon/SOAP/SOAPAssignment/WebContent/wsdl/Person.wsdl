@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://model" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://model" xmlns:intf="http://model" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://model" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getFname">
+    <complexType/>
+   </element>
+   <element name="getFnameResponse">
+    <complexType>
+     <sequence>
+      <element name="getFnameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLname">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setLnameResponse">
+    <complexType/>
+   </element>
+   <element name="getLname">
+    <complexType/>
+   </element>
+   <element name="getLnameResponse">
+    <complexType>
+     <sequence>
+      <element name="getLnameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setFname">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setFnameResponse">
+    <complexType/>
+   </element>
+   <element name="setId">
+    <complexType>
+     <sequence>
+      <element name="in0" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="setIdResponse">
+    <complexType/>
+   </element>
+   <element name="getId">
+    <complexType/>
+   </element>
+   <element name="getIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getIdReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getIdRequest">
+
+      <wsdl:part element="impl:getId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFnameRequest">
+
+      <wsdl:part element="impl:getFname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLnameRequest">
+
+      <wsdl:part element="impl:getLname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLnameResponse">
+
+      <wsdl:part element="impl:setLnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getFnameResponse">
+
+      <wsdl:part element="impl:getFnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getLnameResponse">
+
+      <wsdl:part element="impl:getLnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIdResponse">
+
+      <wsdl:part element="impl:setIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getIdResponse">
+
+      <wsdl:part element="impl:getIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setLnameRequest">
+
+      <wsdl:part element="impl:setLname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFnameRequest">
+
+      <wsdl:part element="impl:setFname" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setFnameResponse">
+
+      <wsdl:part element="impl:setFnameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="setIdRequest">
+
+      <wsdl:part element="impl:setId" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Person">
+
+      <wsdl:operation name="getFname">
+
+         <wsdl:input message="impl:getFnameRequest" name="getFnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getFnameResponse" name="getFnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLname">
+
+         <wsdl:input message="impl:setLnameRequest" name="setLnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setLnameResponse" name="setLnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLname">
+
+         <wsdl:input message="impl:getLnameRequest" name="getLnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getLnameResponse" name="getLnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFname">
+
+         <wsdl:input message="impl:setFnameRequest" name="setFnameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setFnameResponse" name="setFnameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId">
+
+         <wsdl:input message="impl:setIdRequest" name="setIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:setIdResponse" name="setIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId">
+
+         <wsdl:input message="impl:getIdRequest" name="getIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getIdResponse" name="getIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ClientSoapBinding" type="impl:Client">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getFname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getFnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getFnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setLname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setLnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setLnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getLname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getLnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getLnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setFname">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setFnameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setFnameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="setId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="setIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="setIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getId">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ClientService">
+
+      <wsdl:port binding="impl:ClientSoapBinding" name="Client">
+
+         <wsdlsoap:address location="http://localhost:8080/SOAPAssignment/services/Client"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
